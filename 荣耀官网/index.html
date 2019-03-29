@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>荣耀专区</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font.css"/>
+	</head>
+	<body>
+		<!--导航条-->
+		<div class="hid-t" id="hid-t">
+			
+		</div>
+		<!--搜索框-->
+		<div class="hid-m" id="hid-m">
+			
+		</div>
+		<!--轮播图-->
+		<div class="hid-b" id="hid-b">
+			
+		</div>
+		<!--热销爆款-->
+		<div class="cont-t" id="cont-t">
+			
+		</div>
+		<!--荣耀手机-->
+		<div class="cont-m" id="cont-m">
+			<div id="cont-m-t" class="cont-m-t"></div>
+			<div id="cont-m-b" class="cont-m-b"></div>
+		</div>
+		<!--笔记本电脑&平板-->
+		<div class="cont-b" id="cont-b">
+			<div id="cont-b-t" class="cont-b-t"></div>
+			<div id="cont-b-b" class="cont-b-b"></div>
+		</div>
+		<!--潮流穿戴-->
+		<div class="cont-n" id="cont-n">
+			<div class="cont-n-t" id="cont-n-t"></div>
+			<div class="cont-n-b" id="cont-n-b"></div>
+		</div>
+		<!--炫彩配件-->
+		<div class="cont-l" id="cont-l">
+			<div class="cont-l-t" id="cont-l-t"></div>
+			<div class="cont-l-b" id="cont-l-b"></div>
+		</div>
+		<!--智能家居-->
+		<div class="cont-r" id="cont-r">
+			<div class="cont-r-t" id="cont-r-t"></div>
+			<div class="cont-r-b" id="cont-r-b"></div>
+		</div>
+		<!--底部售后-->
+		<div class="bottom" id="bottom">
+			<div class="btm-t" id="btm-t"></div>
+			<div class="mr">
+				<div class="btm-m" id="btm-m"></div>
+				<div class="btm-r" id="btm-r"></div>
+			</div>
+			<div class="btm-b" id="btm-b"></div>
+		</div>
+	</body>
+</html>
+
+<!--顶部导航条-->
+<script type="text/template" id="temp">
+	<!--导航条-->
+	<div>
+		<ul id="header-l">
+			<% for(var i=0;i<data1[0].length;i++){ %>
+				<li>
+					<%= data1[0][i] %>
+				</li>
+			<% } %>
+		</ul>
+		<ul id="header-r" class="clearfix">
+			<% for(var j=0;j<data1[1].length;j++){ %>
+				<li>
+					<%= data1[1][j] %>
+				</li>
+			<% } %>
+		</ul>
+	</div>
+</script>
+
+<!--搜索框-->
+<script type="text/template" id="honor">
+	<div>
+		<div class="hid-m-1">
+			<img src=<%= data2[0][0] %> />
+			<em></em>
+			<img src=<%= data2[0][1] %> />
+		</div>
+		<div class="hid-m-2">
+			<ul class="clearfix">
+				<% for(var i=0;i<data2[1].length;i++){ %>
+					<li>
+						<%= data2[1][i] %>
+					</li>
+				<% } %>
+			</ul>
+		</div>
+		<div class="hid-m-3">
+			<input type="text"/>
+			<div>
+				<p>
+					<%= data2[2][0] %>
+				</p>
+				<p>
+					<%= data2[2][1] %>
+				</p>
+			</div>
+			<!--这里写放大镜-->
+			<div class="sousuo">
+				
+			</div>
+		</div>
+	</div>
+</script>
+
+<!--轮播图-->
+<script type="text/template" id="lunbo">
+	<div>
+		<% for(var i=0;i<data3.length;i++){ %>
+			<img src=<%= data3[i] %> />
+		<% } %>
+		<ul>
+			<% for(var j=0;j<data3.length;j++){ %>
+				<li>
+					
+				</li>
+			<% } %>
+		</ul>
+	</div>
+</script>
+
+<!--热销爆款-->
+<script type="text/template" id="hotmai">
+	<div>
+		<h2>
+			<span><%= data4[0] %></span>
+		</h2>
+		<div class="pic7">
+			<img src=<%= data4[1] %>/>
+			<img src=<%= data4[2] %>/>
+		</div>
+	</div>
+</script>
+
+<!--荣耀手机   笔记本电脑&平板    潮流穿戴    炫彩配件    智能家居-->
+<script type="text/template" id="mobile1">
+	<div>
+		<h2>
+			<span>
+				<%= data5[0] %>    
+			</span>
+		</h2>
+		<ul>
+			<% for(var i=0;i<data5[1].length;i++){ %>
+				<li>
+					<%= data5[1][i] %>
+				</li>
+			<% } %>
+		</ul>
+		<!--更多-->
+		<div class="more"><%= data5[2] %></div>
+	</div>
+</script>
+<script type="text/template" id="mobile2">
+	<div>
+		<% for(var j=0;j<data6.length;j++){ %>
+			<div>
+				<div class="box">
+					<p><%= data6[j][0] %></p>
+					<p><%= data6[j][1] %></p>
+					<p><%= data6[j][2] %></p>
+				</div>
+			</div>
+		<% } %>
+	</div>
+</script>
+
+<!--底部售后-->
+<script type="text/template" id="end1">
+	<div class="bottom-1">
+		<% for(var i=0;i<data7.length;i++){ %>
+			<div>
+				<i class="none"></i>
+				<p>
+					<%= data7[i] %>
+				</p>
+			</div>
+		<% } %>
+	</div>
+</script>
+<script type="text/template" id="end2">
+	<div class="bottom-2">
+		<% for(var i=0;i<data8.length;i++){ %>
+			<ul class="ul1">
+				<% for(var j=0;j<data8[i].length;j++){ %>
+					<li>
+						<%= data8[i][j] %>
+					</li>
+				<% } %>
+			</ul>
+		<% } %>
+	</div>
+</script>
+<script type="text/template" id="end3">
+	<div class="bottom-3">
+		<p>
+			<%= data9[0] %>
+		</p>
+		<span>
+			<%= data9[1] %>
+		</span>
+		<div>
+			<i></i>
+			<%= data9[2] %>
+		</div>
+		<h2>
+			<%= data9[3] %>
+		</h2>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</script>
+<script type="text/template" id="end4">
+	<div class="bottom-4">
+		<img src=<%= data10[0] %> >
+		<ul>
+			<% for(var i=0;i<data10[1].length;i++){ %>
+				<li>
+					<%= data10[1][i] %>
+				</li>
+			<% } %>
+		</ul>
+		<div class="img">
+			<img src=<%= data10[2] %> >
+			<img src=<%= data10[3] %> >
+		</div>
+	</div>
+</script>
+<!--引入underscore.js-->
+<script type="text/javascript" src="js/underscore.js"></script>
+<!--引入index.js-->
+<script type="text/javascript" src="js/index.js"></script>
+
+
